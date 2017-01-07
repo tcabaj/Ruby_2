@@ -7,6 +7,6 @@ RSpec.describe 'menu.rb' do
   obj = Menu.new
 
   it 'should not raise error' do
-    expect { obj.draw }.not_to raise_error
+    expect { obj.to_s }.not_to raise_error
   end
 end
