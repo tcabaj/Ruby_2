@@ -1,6 +1,6 @@
-## Projekt 2  [![Build Status](https://travis-ci.org/tcabaj/Ruby_2.svg?branch=master)](https://travis-ci.org/tcabaj/Ruby_2)
+## Projekt 2  [![Build Status](https://travis-ci.org/tcabaj/Ruby_2.svg?branch=master)](https://travis-ci.org/tcabaj/Ruby_2)[![Code Climate](https://codeclimate.com/github/tcabaj/Ruby_2/badges/gpa.svg)](https://codeclimate.com/github/tcabaj/Ruby_2)
 
-# Baza utworow muzycznych 
+# Baza utworow muzycznych
 
 #### Uruchomienie programu:
 Aby uruchomić program wystarczy przejść do katalogu `bin` i uruchomić program wpisując w konsoli `ruby run.rb`
