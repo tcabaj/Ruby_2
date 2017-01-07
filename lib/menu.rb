@@ -11,7 +11,6 @@ class Menu
     @menu << "4. Wyświetl wszystkie utwóry \n"
     @menu << "0. Wyjscie\n"
     @menu << "----------------------------------\n"
-    @menu << 'Wybierz => '
   end
 
   def to_s
