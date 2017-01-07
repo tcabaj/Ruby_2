@@ -26,9 +26,9 @@ class Manager
     id = id.to_i - 1
     @@muzyka.delete_at(id)
     @@muzyka.each do |i|
-    if i.id > id
-      i.id = i.id - 1
-    end
+      if i.id > id
+        i.id = i.id - 1
+      end
     end
   end
 
