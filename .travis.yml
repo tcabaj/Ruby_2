@@ -4,3 +4,4 @@ rvm:
   addons:
     code_climate:
         repo_token: 1f7629ed0e897d643a73f9f59e2acaf07830d20e14f98664263e39d58872f0d7
+# regular test configuration
