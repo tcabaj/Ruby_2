@@ -43,8 +43,8 @@ class Run
         puts 'Utwor zostal zmieniony'
       when '4'
         puts
-        print "---- Lista utworow ----" + "\n"
-        puts @manager.get_muzyka
+        print "---- Lista Utworow ---- \n"
+        @manager.get_muzyka
         printf "\n"
         gets.chomp
       when '0'
@@ -52,8 +52,7 @@ class Run
         else
         puts 'Podales zly znak'
         gets
-
-      end
+    end
   end
 
   @runclass = Run.new
