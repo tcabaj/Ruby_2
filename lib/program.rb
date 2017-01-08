@@ -13,37 +13,67 @@ class Run
     case gets.chomp
     when '1'
       puts
-      puts 'Podaj tytul utworu: '
-      title = gets.chomp
-      puts 'Podaj wykonawce: '
-      author = gets.chomp
-      puts 'Podaj rok produkcji: '
-      yop = gets.chomp
+      title = ''
+      author = ''
+      yop = ''
+      loop do
+        puts 'Podaj tytul utworu: '
+        title = gets.chomp
+        break if title != ''
+      end
+      loop do
+        puts 'Podaj wykonawce: '
+        author = gets.chomp
+        break if author != ''
+      end
+      loop do
+        puts 'Podaj rok produkcji: '
+        yop = gets.chomp
+        break if @manager.numeric?(yop) == false
+      end
       @manager.add_muzyka(title, author, yop)
       print 'Utwor zostal dodany'
+      gets
     when '2'
       puts
       puts 'Podaj ID piosenki, ktory chcesz usunac '
       id = gets.chomp
-      @manager.delete_muzyka(id)
-      print 'Utwor zostal usuniety'
+      if @manager.exist_muzyka(id) == 1
+        @manager.delete_muzyka(id)
+        puts 'Utwor zostal usuniety'
+      else
+        puts 'Utwór o takim ID nie istnieje'
+      end
+      gets
     when '3'
+      title = ''
+      author = ''
+      yop = ''
       puts
       puts 'Podaj ID piosenki'
       id = gets.chomp
       id = id.to_i
-      puts 'Podaj tytul utworu: '
-      title = gets.chomp
-      puts 'Podaj wykonawce: '
-      author = gets.chomp
-      puts 'Podaj rok produkcji:  '
-      yop = gets.chomp
+      loop do
+        puts 'Podaj tytul utworu: '
+        title = gets.chomp
+        break if title != ''
+      end
+      loop do
+        puts 'Podaj wykonawce: '
+        author = gets.chomp
+        break if author != ''
+      end
+      loop do
+        puts 'Podaj rok produkcji: '
+        yop = gets.chomp
+        break if @manager.numeric?(yop) == false
+      end
       @manager.update_muzyka(id, title, author, yop)
-      puts 'Utwor zostal zmieniony'
+      gets
     when '4'
       puts
       print "---- Lista Utworow ---- \n"
-      @manager.get_muzyka
+      @manager.list_muzyka
       printf "\n"
       gets.chomp
     when '0'
