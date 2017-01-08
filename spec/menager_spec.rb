@@ -9,7 +9,7 @@ RSpec.describe 'manager.rb' do
   end
 
   it 'should output all films' do
-    expect { obj.get_muzyka } .not_to raise_error
+    expect { obj.list_muzyka } .not_to raise_error
   end
 
   it 'should edit film' do
